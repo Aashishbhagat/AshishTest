@@ -16,11 +16,18 @@ document.onreadystatechange = function () {
 function onAppActivate() {
   var textElement = document.getElementById('apptext');
   var getContact = client.data.get('contact');
-  getContact.then(showContact).catch(handleErr);
-
+  //getContact.then(showContact).catch(handleErr);
+ 
+  var getCompany = client.data.get('company');
+  getCompany.then(showCompany).catch(handleErr);
   function showContact(payload) {
     textElement.innerHTML = `Ticket created by ${payload.contact.name}`;
   }
+  function showCompany(payload) {
+    textElement.innerHTML = `Company name : ${payload.company.name}`;
+  }
+
+  document.getElementById("clickMe").onclick = function () { console.log('This is for Testing Purpose!'); };
 }
 
 function handleErr(err) {
