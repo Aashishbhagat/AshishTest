@@ -1,1 +1,14 @@
-{}
+{
+        "domain": {
+          "display_name": "domain",
+          "description": "Please enter the Freshdesk domain",
+          "type": "text",
+          "required": true
+        },
+        "auth": {
+          "display_name": "Freshdesk Authorization Key",
+          "description": "Please enter the Freshdesk Authorization Key",
+           "type": "text",
+           "required": true
+        }
+}
