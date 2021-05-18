@@ -14,13 +14,19 @@
   <body>
     <div class="fw-widget-wrapper">
       <p>Congratulations on buliding your first app. You can utilize this space to build your app.</p>
-      <input id="clickMe" type="button" value=" Get Tickets "/>
+     <br>
+      <button class="getTicket">Get Tickets</button>
       <br>
       <p id="demo"></p>
       <br>
-      <select id="TicketNumber">
-      
+      <div>
+        <label for="cars">Choose a Ticket:</label>
+      <select id="TicketNumber" onchange="ticketInfo(this.value)">
+      <option value="select">Select the Ticket</option>
     </select>
+  </div>
+  <br>
+    <p id="ticketInfo"></p>
       <p id="apptext"></p>
     </div>
   </body>
